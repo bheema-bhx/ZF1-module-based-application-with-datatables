@@ -1,5 +1,5 @@
 1. ABOUT THIS APPLICATION 
-2. 
+ 
 
 The Aim of this Application  is "Zend Framework 1 (ZF1) module based application with datatables"
 
