@@ -1,0 +1,53 @@
+<?= $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+       <?=
+            $this->headLink()
+                ->appendStylesheet($this->baseUrl() .'/css/bootstrap.css');
+        ?>
+        
+      
+	
+	  <?=
+            $this->headLink()
+                ->appendStylesheet($this->baseUrl() .'/media/css/demo_page.css');
+        ?>
+        
+         <?=
+            $this->headLink()
+                ->appendStylesheet($this->baseUrl() .'/css/welcome.css');
+        ?>
+        
+        
+<?= $this->headScript()->appendFile($this->baseUrl() .'/js/welcome.js'); ?> 
+<?= $this->headScript()->appendFile($this->baseUrl() .'/js/jquery.js'); ?> 
+    <?= $this->headScript()->appendFile($this->baseUrl() .'/js/jquery.validate.js'); ?>
+<?= $this->headScript()->appendFile($this->baseUrl() .'/js/validation.js') ?> 
+ <?= $this->headScript()->appendFile($this->baseUrl() .'/js/jquery.dataTables.js') ?>
+
+<style>
+.error{
+color:red;
+
+}
+</style>
+ 
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').dataTable( {
+        
+    } );
+} );
+
+</script>
+    </head>
+    <body>
+
+
+
+<?php echo $this->layout()->content; ?>
+
+    </body>
+</html>

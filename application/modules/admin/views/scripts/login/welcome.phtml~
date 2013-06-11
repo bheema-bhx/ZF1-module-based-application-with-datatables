@@ -1,0 +1,97 @@
+<?php
+$users = new Admin_Model_Login();
+
+
+$columns = $users->columns('users');
+$result = $users->fetchAll(users);
+
+?>
+
+	
+
+    <div id="main">
+      <div class="navbar-inner" style="margin-bottom:20px;">
+<h2 style="color:white">Users List</h2>
+</div>
+
+<center>
+<a href="<?= $this->url(array(
+                                 'controller' => 'Login',
+                                 'action' 	  => 'logout',
+				'module' => 'admin'
+								 
+                                 )); ?>">Logout</a>
+								 
+								
+</center>								 
+
+
+
+	<div class="btn-toolbar">
+
+<div>
+
+</div>
+
+
+ 
+  	<div>
+		
+</div>
+</div>
+
+<table class="display" id="example">
+<thead>
+<tr>
+<th>Id</th>
+<th>First Name</th>
+<th>Last Name</th>
+<th>User Name</th>
+<th>Email</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<?php
+
+//$session = new Zend_Session_Namespace('session');
+			//$session->username = $this->getRequest ()->getParam ( 'username');
+
+
+
+	for($i=0;$i<count($result);$i++){ 
+		 echo "<tr id=".$result[$i]['id']."><td>".$result[$i]['id']."</td>
+			  <td>".$result[$i]['firstname']."</td>
+			  <td>".$result[$i]['lastname']."</td>
+			  <td>".$result[$i]['username']."</td>
+			  <td>".$result[$i]['email']."</td> ";
+			  
+			  ?>
+			  <td> <a href="<?= $this->url(array(
+                                 'controller' => 'Login',
+                                 'action' 	  => 'del',
+                                 'id' 		  => $result[$i]['id'])); ?>" class="delete">Delete</a> / 
+								 
+				   <a href="<?= $this->url(array(
+                                 'controller' => 'Login',
+                                 'action' 	  => 'edit',
+                                 'id' 		  => $result[$i]['id'])); ?>" > Edit</a>	  
+				 
+								
+			  </td>
+		  </tr>
+		
+	  
+ <?php }  ?>
+
+</tbody>	                                                                              
+</table>
+
+
+
+<?php $session->result = " "; 
+
+
+ ?>
+
