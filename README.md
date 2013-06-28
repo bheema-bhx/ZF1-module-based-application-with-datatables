@@ -1,6 +1,5 @@
-1. ABOUT THIS APPLICATION 
- 
-
+1. ABOUT THIS APPLICATION
+***************************
 The Aim of this Application  is "Zend Framework 1 (ZF1) module based application with datatables"
 
                  This is the skeleton application that integrates  datatables in Zend Framework 1 (ZF1),
@@ -9,7 +8,7 @@ The Aim of this Application  is "Zend Framework 1 (ZF1) module based application
 
 
 2. WHAT THIS APPLICATION CONTAINS
-
+**********************************
 
 Below is a list of files released as part of this build.
 
@@ -29,4 +28,4 @@ Public → this folder contains css,js,media, index.php  files.
 Zendreg.sql → sql file
 
 ***********************
-A module by Bheema
+
